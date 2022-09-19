@@ -5,7 +5,9 @@ async function fetchingMealByIngredient(ingredient) {
         const json = await response.json();
 
         // if(!json.meals) console.log("There are no meals for this ingredient")
-        !json.meals ? console.log("There are no meals for this ingredient."): console.log(json);
+        json.meals ? resultsTitle.innerText = "Your Search Results:": console.log(json);
+
+        !json.meals ? resultsTitle.innerText = "No Results Found...": console.log(json);
 }
 
 // fetchingMealByIngredient("chicken breast")
