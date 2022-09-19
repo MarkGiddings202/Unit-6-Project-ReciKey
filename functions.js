@@ -5,7 +5,12 @@ async function fetchingMealByIngredient(ingredient) {
         const json = await response.json();
 
         // if(!json.meals) console.log("There are no meals for this ingredient")
-        !json.meals ? console.log("There are no meals for this ingredient."): console.log(json);
+        // !json.meals ? console.log("There are no meals for this ingredient."): console.log(json);
+        if(!json.meals) {
+            console.log("There are no meals for this ingredient");
+        } else {
+            
+        }
 }
 
 // fetchingMealByIngredient("chicken breast")
@@ -17,3 +22,4 @@ searchButton.addEventListener("click", (e) => {
         fetchingMealByIngredient(userInput);
     }
 });
+
