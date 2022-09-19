@@ -5,11 +5,11 @@ A food recipe app, that will give you an elevated dish based off of the ingredie
 
 _Team:_
 
-* Product Manager/Developer: [Gavin](https://github.com/MarkGiddings202)
+* Product Manager/Developer: Gavin
 
-* Developer: [Emmanuel Ruiz](https://github.com/EmmanuelR21)
+* Developer: Emmanuel Ruiz
 
-* Developer: [Cristopher Pico](https://github.com/Crislp12)
+* Developer: Cristopher Pico
 
 _Tech Stack:_
 
