@@ -194,7 +194,7 @@ body {
   display: none;
   padding: 2rem 0;
 }
-/*  effects pop up after description has been clicked*/
+
 .meal-details::-webkit-scrollbar {
   width: 10px;
 }
