@@ -1,5 +1,9 @@
 // Functions
 
+function query(name){
+    return document.querySelector(name);
+}
+
 const removeChilds = (parent) => {
     while (parent.lastChild) {
         parent.removeChild(parent.lastChild);
