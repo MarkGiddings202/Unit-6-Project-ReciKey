@@ -230,6 +230,7 @@ body {
 }
 
 /*  effects pop up after description has been clicked*/
+
 .meal-details::-webkit-scrollbar {
   width: 10px;
 }
@@ -351,6 +352,12 @@ body {
   font-size: 1.8rem;
   font-weight: 600;
   width: 100%;
+}
+
+#vegan-option , #seafood-option{
+  background-color: white;
+  padding: 4px;
+  border-radius: 20px;
 }
 
 
