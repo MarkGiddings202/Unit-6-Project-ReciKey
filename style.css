@@ -137,8 +137,14 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: auto;
+  height: 100%;
   border: 5px dashed #f7a239;
+  padding: 10px;
+}
+
+#card{
+  border: 5px solid red;
+  padding: 15px;
 }
 
 /* size of meal items */
