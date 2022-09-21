@@ -1,7 +1,4 @@
 // Functions
-
-
-
 const removeChilds = (parent) => {
     while (parent.lastChild) {
         parent.removeChild(parent.lastChild);
@@ -56,8 +53,6 @@ async function listMealsByCategory(category) {
         newMeal.innerText = json.meals[i].strMeal;
     }
 }
-
-// fetchingMealByIngredient("chicken breast")
 
 //Event listeners
 searchButton.addEventListener("click", (e) => {
