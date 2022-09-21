@@ -19,6 +19,9 @@ async function fetchingMealByIngredient(ingredient) {
         console.log("There are no meals for this ingredient")
     } else {
         console.log(json);
+        
+        removeChilds(mealSearchResults);
+
         for (let i = 0; i < json.meals.length; i++) {
             const card = document.createElement("div")
             card.id ="card"
@@ -70,21 +73,16 @@ async function listMealsByCategory(category) {
     const response = await fetch(`${categoryEnpoint}`);
     const json = await response.json();
 
-    const mealResult = document.getElementById("meal");
-
-    removeChilds(mealResult);
+    removeChilds(mealSearchResults);
 
     for (let i = 0; i < json.meals.length; i++) {
         const newMeal = document.createElement("h3");
 
-        mealResult.appendChild(newMeal);
+        mealSearchResults.appendChild(newMeal);
         newMeal.innerText = json.meals[i].strMeal;
     }
 }
 
-
-
-// fetchingMealByIngredient("chicken breast")
 
 //Event listeners
 searchButton.addEventListener("click", (e) => {
@@ -96,6 +94,84 @@ searchButton.addEventListener("click", (e) => {
 });
 
 veganOptionBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const category = e.path[0].innerText;
+
+    listMealsByCategory(category)
+})
+breakfastOptionBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const category = e.path[0].innerText;
+
+    listMealsByCategory(category)
+})
+dessertOptionBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const category = e.path[0].innerText;
+
+    listMealsByCategory(category)
+})
+seafoodOptionBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const category = e.path[0].innerText;
+
+    listMealsByCategory(category)
+})
+beefOptionBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const category = e.path[0].innerText;
+
+    listMealsByCategory(category)
+})
+lambOptionBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const category = e.path[0].innerText;
+
+    listMealsByCategory(category)
+})
+pastaOptionBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const category = e.path[0].innerText;
+
+    listMealsByCategory(category)
+})
+porkOptionBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const category = e.path[0].innerText;
+
+    listMealsByCategory(category)
+})
+chickenOptionBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const category = e.path[0].innerText;
+
+    listMealsByCategory(category)
+})
+sideOptionBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const category = e.path[0].innerText;
+
+    listMealsByCategory(category)
+})
+goatOptionBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const category = e.path[0].innerText;
+
+    listMealsByCategory(category)
+})
+vegetarianOptionBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const category = e.path[0].innerText;
+
+    listMealsByCategory(category)
+})
+starterOptionBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const category = e.path[0].innerText;
+
+    listMealsByCategory(category)
+})
+miscellaneousOptionBtn.addEventListener("click", (e) => {
     e.preventDefault();
     const category = e.path[0].innerText;
 
