@@ -2,8 +2,7 @@
 function query(name){
     return document.querySelector(name);
 }
-const searchInput = document.getElementById("search-input");
-const searchButton = document.getElementById("search-btn");
+
 const veganOptionBtn = query("#vegan-option");
 const seafoodOptionBtn = query("#seafood-option");
 const breakfastOptionBtn = query("#breakfast-option");
@@ -19,4 +18,9 @@ const vegetarianOptionBtn = query("#vegetarian-option");
 const starterOptionBtn = query("#start-option");
 const miscellaneousOptionBtn = query("#miscellaneous-option");
 
+const searchInput = document.getElementById("search-input");
+const searchButton = document.getElementById("search-btn");
+
+const mealSearchResults = document.getElementById("meal");
 const resultsTitle = document.querySelector("#Results-title")
+
