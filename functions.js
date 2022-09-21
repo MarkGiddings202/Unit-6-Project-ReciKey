@@ -1,5 +1,4 @@
 // Functions
-
 const removeChilds = (parent) => {
     while (parent.lastChild) {
         parent.removeChild(parent.lastChild);
@@ -77,8 +76,6 @@ async function listMealsByCategory(category) {
     }
 }
 
-// fetchingMealByIngredient("chicken breast")
-
 //Event listeners
 searchButton.addEventListener("click", (e) => {
     e.preventDefault()
@@ -89,6 +86,84 @@ searchButton.addEventListener("click", (e) => {
 });
 
 veganOptionBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const category = e.path[0].innerText;
+
+    listMealsByCategory(category)
+})
+breakfastOptionBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const category = e.path[0].innerText;
+
+    listMealsByCategory(category)
+})
+dessertOptionBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const category = e.path[0].innerText;
+
+    listMealsByCategory(category)
+})
+seafoodOptionBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const category = e.path[0].innerText;
+
+    listMealsByCategory(category)
+})
+beefOptionBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const category = e.path[0].innerText;
+
+    listMealsByCategory(category)
+})
+lambOptionBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const category = e.path[0].innerText;
+
+    listMealsByCategory(category)
+})
+pastaOptionBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const category = e.path[0].innerText;
+
+    listMealsByCategory(category)
+})
+porkOptionBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const category = e.path[0].innerText;
+
+    listMealsByCategory(category)
+})
+chickenOptionBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const category = e.path[0].innerText;
+
+    listMealsByCategory(category)
+})
+sideOptionBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const category = e.path[0].innerText;
+
+    listMealsByCategory(category)
+})
+goatOptionBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const category = e.path[0].innerText;
+
+    listMealsByCategory(category)
+})
+vegetarianOptionBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const category = e.path[0].innerText;
+
+    listMealsByCategory(category)
+})
+starterOptionBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const category = e.path[0].innerText;
+
+    listMealsByCategory(category)
+})
+miscellaneousOptionBtn.addEventListener("click", (e) => {
     e.preventDefault();
     const category = e.path[0].innerText;
 

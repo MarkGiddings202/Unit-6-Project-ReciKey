@@ -348,9 +348,9 @@ body {
   width: 100%;
 }
 
-#vegan-option , #seafood-option{
+.recommended-options {
   background-color: white;
-  padding: 4px;
+  padding: 6px;
   border-radius: 20px;
 }
 
