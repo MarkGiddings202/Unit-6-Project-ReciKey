@@ -13,6 +13,9 @@ async function fetchingMealByIngredient(ingredient) {
         console.log("There are no meals for this ingredient")
     } else {
         console.log(json);
+        
+        removeChilds(mealSearchResults);
+
         for (let i = 0; i < json.meals.length; i++) {
             const card = document.createElement("div")
             const mealHeading = document.createElement("h2");
@@ -64,14 +67,12 @@ async function listMealsByCategory(category) {
     const response = await fetch(`${categoryEnpoint}`);
     const json = await response.json();
 
-    const mealResult = document.getElementById("meal");
-
-    removeChilds(mealResult);
+    removeChilds(mealSearchResults);
 
     for (let i = 0; i < json.meals.length; i++) {
         const newMeal = document.createElement("h3");
 
-        mealResult.appendChild(newMeal);
+        mealSearchResults.appendChild(newMeal);
         newMeal.innerText = json.meals[i].strMeal;
     }
 }
