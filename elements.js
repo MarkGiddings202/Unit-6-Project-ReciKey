@@ -1,8 +1,8 @@
-// Dom Elements
 function query(name){
     return document.querySelector(name);
 }
 
+// Dom Elements
 const veganOptionBtn = query("#vegan-option");
 const seafoodOptionBtn = query("#seafood-option");
 const breakfastOptionBtn = query("#breakfast-option");
@@ -15,7 +15,7 @@ const chickenOptionBtn = query("#chicken-option");
 const sideOptionBtn = query("#side-option");
 const goatOptionBtn = query("#goat-option");
 const vegetarianOptionBtn = query("#vegetarian-option");
-const starterOptionBtn = query("#start-option");
+const starterOptionBtn = query("#starter-option");
 const miscellaneousOptionBtn = query("#miscellaneous-option");
 
 const searchInput = document.getElementById("search-input");
