@@ -1,5 +1,5 @@
 // Functions
-const removeChilds = (parent) => {
+const removeChildren= (parent) => {
     while (parent.lastChild) {
         parent.removeChild(parent.lastChild);
     }
@@ -64,11 +64,11 @@ async function fetchingMealByIngredient(ingredient) {
     const json = await response.json();
 
     if (!json.meals) {
-        removeChilds(mealSearchResults);
+        removeChildren(mealSearchResults);
 
         resultsTitle.innerText = "No meals found...";
     } else {
-        removeChilds(mealSearchResults);
+        removeChildren(mealSearchResults);
 
         createMealCards(json.meals)
     }
@@ -97,7 +97,7 @@ async function listMealsByCategory(category) {
     const response = await fetch(`${categoryEnpoint}`);
     const json = await response.json();
 
-    removeChilds(mealSearchResults);
+    removeChildren(mealSearchResults);
 
     createMealCards(json.meals);
 }
