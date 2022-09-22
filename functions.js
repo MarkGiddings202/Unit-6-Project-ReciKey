@@ -4,7 +4,68 @@ const removeChilds = (parent) => {
         parent.removeChild(parent.lastChild);
     }
 };
+
+
+
+const createMealCards = async (meals) => {
+    for (let i = 0; i < meals.length; i++) {
+        const card = document.createElement("div")
+        card.id ="card"
+        const mealHeading = document.createElement("h2");
+        const mealImg= document.createElement("img")
+        mealImg.id = "meal-Img"
+
+        const btn = document.createElement("INPUT");
+        btn.setAttribute("type", "button");
+        btn.setAttribute("value", "Recepi");
+        btn.id = meals[i].idMeal
+
+        btn.className = "Recipe-Searcg-Btn"
+        btn.addEventListener("click", async (e)=>{
+
+            const fetching = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${meals[i].idMeal}`)
+            const parsedMealField = await fetching.json()
+          
+
+            mealDetailsContent.style.display= "block"
+            document.documentElement.style.overflow = 'hidden';  // firefox, chrome
+            document.body.scroll = "no"; // ie only
+            recipeInstructions.innerText = `${parsedMealField.meals[0].strInstructions}`
+            recipeTitle.innerText = meals[i].strMeal
+            recipeImg.src =`${parsedMealField.meals[0].strMealThumb}`
+           
+//             const recipeTitle = document.querySelector(".recipe-title")
+// const recipeInstructions = document.querySelector(".instruct")
+// const recipeImg = document.querySelector(".recipe-img")
+
+
+                      
+        })
+        
+
+        ///  apend elements 
+        mealSearchResults.appendChild(card) // parent div meal
+        card.appendChild(mealImg)
+        card.appendChild(mealHeading)
+        card.appendChild(btn)
+        mealHeading.innerText = meals[i].strMeal;
+        
+
+
+       const img = await getMealImg(meals[i].idMeal)
+        
+        // style for images
+        mealImg.src = img
+        mealImg.width = "200"
+        mealImg.height ="200"
+        
+    }
+
+}
+
+
 async function getMealImg(link) {
+
     const recepiceFetch = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${link}`)
     const recepicejson = await recepiceFetch.json()
     return recepicejson.meals[0].strMealThumb
@@ -21,32 +82,13 @@ async function fetchingMealByIngredient(ingredient) {
 
         removeChilds(mealSearchResults);
 
-        for (let i = 0; i < json.meals.length; i++) {
-            const card = document.createElement("div")
-            card.id = "card"
-            card.setAttribute("class", "animate__animated animate__fadeInLeft")
-            const mealHeading = document.createElement("h2");
-            const mealImg = document.createElement("img")
-            mealImg.id = "meal-Img"
 
+        createMealCards(json.meals)
 
+       
+   }
 
-            ///  apend elements 
-            mealSearchResults.appendChild(card) // parent div meal
-            card.appendChild(mealImg)
-            card.appendChild(mealHeading)
-            mealHeading.innerText = json.meals[i].strMeal;
-            console.log(json.meals[i])
-
-
-            const img = await getMealImg(json.meals[i].idMeal)
-
-            // style for images
-            mealImg.src = img
-            mealImg.width = "200"
-            mealImg.height = "200"
-        }
-    }
+ 
 }
 
 async function listMealsByCategory(category) {
@@ -186,9 +228,13 @@ starterOptionBtn.addEventListener("click", (e) => {
 
     listMealsByCategory(category)
 })
-miscellaneousOptionBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    const category = e.path[0].innerText;
 
-    listMealsByCategory(category)
-})
+// recipe card function 
+
+
+
+span.onclick = function() {
+    mealDetailsContent.style.display = "none";
+    document.documentElement.style.overflow = 'auto';  // firefox, chrome
+    document.body.scroll = "yes"; // ie only
+  }

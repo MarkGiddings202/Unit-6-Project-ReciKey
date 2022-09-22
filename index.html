@@ -22,12 +22,13 @@
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="recipe.css">
     <title>ReciKey</title>
 </head>
 
-<body>
+<body class ="Body">
     <!-- div that contains the whole page -->
-    <div class="container">
+    <div class="Container">
         <div class="meal-wrapper">
             <div class="meal-search animate__animated animate__bounceInDown">
                 <h2 class="title">Find Meals For Your Ingredients</h2>
@@ -74,13 +75,26 @@
                 <h2 class="title" id="Results-title">Your Search Results:</h2>
                 <div id="meal">
                 </div>
+            </div>
+            <div class="meal-details-content">
+                <div class="modal-content">
+                <h2 class="recipe-title">Meals Name Here</h2>
+                <div class="recipe-instruct">
+                    <span class="close">&times;</span>
+                    <h3>Instructions:</h3>
+                    <p class="instruct">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo blanditiis quis
+                        accusantium natus! Porro, reiciendis maiores molestiae distinctio veniam ratione ex provident
+                        ipsa, soluta suscipit quam eos velit autem iste!</p>
+                </div>
+                <div class="recipe-meal-img">
+                    <img src="food.jpg" alt="" class="recipe-img">
+                </div>
                 
             </div>
-
+            </div>
         </div>
-    </div>
-    <script src="elements.js"></script>
-    <script src="functions.js"></script>
+        <script src="elements.js"></script>
+        <script src="functions.js"></script>
 </body>
 
 </html>

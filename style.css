@@ -39,7 +39,7 @@ body {
 }
 
 /* positioning for entire web page holding out meal-etc */
-.container {
+.Container {
   min-height: 100vh;
 }
 
@@ -145,6 +145,8 @@ body {
 #card {
   border: 5px solid red;
   padding: 15px;
+  width: 100%;
+  height: 100%;
 }
 
 /* size of meal items */
@@ -206,7 +208,7 @@ body {
 }
 
 /* meal details */
-.meal-details {
+.meal-details-{
   position: fixed;
   top: 50%;
   left: 50%;
@@ -251,63 +253,50 @@ body {
 }
 
 .meal-details-content {
-  margin: 2rem;
+ display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */ 
+  }
+
+  .modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
 }
 
-.meal-details-content p:not(.recipe-category) {
+  .close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* .meal-details-content p:not(.recipe-category) {
   padding: 1rem 0;
-}
+} */
 
-.recipe-close-btn {
-  position: absolute;
-  right: 2rem;
-  top: 2rem;
-  font-size: 1.8rem;
-  background: #fff;
-  border: none;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0.9;
-}
 
 .recipe-title {
   letter-spacing: 1px;
-  padding-bottom: 1rem;
 }
 
-.recipe-category {
-  background: #fff;
-  font-weight: 600;
-  color: var(--tenne-tawny);
-  display: inline-block;
-  padding: 0.2rem 0.5rem;
-  border-radius: 0.3rem;
-  -webkit-border-radius: 0.3rem;
-  -moz-border-radius: 0.3rem;
-  -ms-border-radius: 0.3rem;
-  -o-border-radius: 0.3rem;
-}
-
-.recipe-category {
-  background: #fff;
-  font-weight: 600;
-  color: var(--tenne-tawny);
-  display: inline-block;
-  padding: 0.2rem 0.5rem;
-  border-radius: 0.3rem;
-  -webkit-border-radius: 0.3rem;
-  -moz-border-radius: 0.3rem;
-  -ms-border-radius: 0.3rem;
-  -o-border-radius: 0.3rem;
-}
 
 .recipe-instruct {
   padding: 1rem 0;
