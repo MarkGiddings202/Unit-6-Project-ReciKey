@@ -7,7 +7,7 @@ const removeChildren= (parent) => {
 
 const createButton = async (index, button, meals) => {
     button.setAttribute("type", "button");
-    button.setAttribute("value", "Recepi");
+    button.setAttribute("value", "Recipe");
     button.id = meals[index].idMeal
 
     button.className = "Recipe-Searcg-Btn"
@@ -21,6 +21,7 @@ const createButton = async (index, button, meals) => {
         recipeInstructions.innerText = `${parsedMealField.meals[0].strInstructions}`
         recipeTitle.innerText = meals[index].strMeal
         recipeImg.src = `${parsedMealField.meals[0].strMealThumb}`
+        recipeLink.href = `${parsedMealField.meals[0].strYoutube}`
     });
 }
 
