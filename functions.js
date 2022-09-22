@@ -48,7 +48,6 @@ const createMealCards = async (meals) => {
     }
 }
 
-
 async function getMealImg(link) {
     const recepiceFetch = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${link}`)
     const recepicejson = await recepiceFetch.json()
