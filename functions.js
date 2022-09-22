@@ -24,6 +24,7 @@ async function fetchingMealByIngredient(ingredient) {
         for (let i = 0; i < json.meals.length; i++) {
             const card = document.createElement("div")
             card.id = "card"
+            card.setAttribute("class", "animate__animated animate__fadeInLeft")
             const mealHeading = document.createElement("h2");
             const mealImg = document.createElement("img")
             mealImg.id = "meal-Img"
@@ -74,26 +75,27 @@ async function listMealsByCategory(category) {
     removeChilds(mealSearchResults);
 
     for (let i = 0; i < json.meals.length; i++) {
-            const card = document.createElement("div")
-            card.id = "card"
-            const mealHeading = document.createElement("h2");
-            const mealImg = document.createElement("img")
-            mealImg.id = "meal-Img"
+        const card = document.createElement("div")
+        card.id = "card"
+        card.setAttribute("class", "animate__animated animate__fadeInLeft")
+        const mealHeading = document.createElement("h2");
+        const mealImg = document.createElement("img")
+        mealImg.id = "meal-Img"
 
-            ///  apend elements 
-            mealSearchResults.appendChild(card) // parent div meal
-            card.appendChild(mealImg)
-            card.appendChild(mealHeading)
-            mealHeading.innerText = json.meals[i].strMeal;
-            console.log(json.meals[i])
+        ///  apend elements 
+        mealSearchResults.appendChild(card) // parent div meal
+        card.appendChild(mealImg)
+        card.appendChild(mealHeading)
+        mealHeading.innerText = json.meals[i].strMeal;
+        console.log(json.meals[i])
 
-            const img = await getMealImg(json.meals[i].idMeal)
+        const img = await getMealImg(json.meals[i].idMeal)
 
-            // style for images
-            mealImg.src = img
-            mealImg.width = "200"
-            mealImg.height = "200"
-        }
+        // style for images
+        mealImg.src = img
+        mealImg.width = "200"
+        mealImg.height = "200"
+    }
 }
 
 
