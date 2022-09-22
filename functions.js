@@ -6,6 +6,7 @@ const removeChilds = (parent) => {
 };
 
 
+
 const createMealCards = async (meals) => {
     for (let i = 0; i < meals.length; i++) {
         const card = document.createElement("div")
@@ -63,11 +64,11 @@ const createMealCards = async (meals) => {
 }
 
 
-async function getMealImg (link){
+async function getMealImg(link) {
+
     const recepiceFetch = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${link}`)
     const recepicejson = await recepiceFetch.json()
     return recepicejson.meals[0].strMealThumb
-
 }
 
 async function fetchingMealByIngredient(ingredient) {
@@ -75,16 +76,19 @@ async function fetchingMealByIngredient(ingredient) {
     const json = await response.json();
 
     if (!json.meals) {
-        console.log("There are no meals for this ingredient")
+        resultsTitle.innerText = "No meals found...";
     } else {
         console.log(json);
-        
+
         removeChilds(mealSearchResults);
+
 
         createMealCards(json.meals)
 
        
    }
+
+ 
 }
 
 async function listMealsByCategory(category) {
@@ -113,10 +117,26 @@ async function listMealsByCategory(category) {
     removeChilds(mealSearchResults);
 
     for (let i = 0; i < json.meals.length; i++) {
-        const newMeal = document.createElement("h3");
+        const card = document.createElement("div")
+        card.id = "card"
+        card.setAttribute("class", "animate__animated animate__fadeInLeft")
+        const mealHeading = document.createElement("h2");
+        const mealImg = document.createElement("img")
+        mealImg.id = "meal-Img"
 
-        mealSearchResults.appendChild(newMeal);
-        newMeal.innerText = json.meals[i].strMeal;
+        ///  apend elements 
+        mealSearchResults.appendChild(card) // parent div meal
+        card.appendChild(mealImg)
+        card.appendChild(mealHeading)
+        mealHeading.innerText = json.meals[i].strMeal;
+        console.log(json.meals[i])
+
+        const img = await getMealImg(json.meals[i].idMeal)
+
+        // style for images
+        mealImg.src = img
+        mealImg.width = "200"
+        mealImg.height = "200"
     }
 }
 

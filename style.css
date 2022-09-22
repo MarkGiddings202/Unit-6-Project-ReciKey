@@ -344,11 +344,17 @@ body {
 }
 
 .recommended-options {
+  margin: auto 5px;
   background-color: white;
   padding: 6px;
   border-radius: 20px;
+  transition: scale 0.1s ease;
 }
 
+.recommended-options:hover {
+  scale: 1.1;
+  border-color: #0078d7;
+}
 
 /* Media Queries */
 @media screen and (min-width: 600px) {
