@@ -23,7 +23,6 @@ const searchButton = document.getElementById("search-btn");
 const mealSearchResults = document.getElementById("meal");
 const resultsTitle = document.querySelector("#Results-title")
 
-const recipeSearcgBtn = document.querySelectorAll(".Recipe-Searcg-Btn")
 const recipeTitle = document.querySelector(".recipe-title")
 const recipeInstructions = document.querySelector(".instruct")
 const recipeImg = document.querySelector(".recipe-img")

@@ -7,10 +7,10 @@ const removeChildren= (parent) => {
 
 const createButton = async (index, button, meals) => {
     button.setAttribute("type", "button");
-    button.setAttribute("value", "Recepi");
+    button.setAttribute("value", "Recipe");
     button.id = meals[index].idMeal
 
-    button.className = "Recipe-Searcg-Btn"
+    button.className = "Recipe-Search-Btn"
     button.addEventListener("click", async () => {
         const fetching = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${meals[index].idMeal}`)
         const parsedMealField = await fetching.json()
@@ -34,7 +34,6 @@ const createMealCards = async (meals) => {
         mealImg.id = "meal-Img"
 
         const btn = document.createElement("INPUT");
-
         createButton(i, btn, meals);
 
         ///  apend elements 
