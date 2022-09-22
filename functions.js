@@ -5,32 +5,37 @@ const removeChilds = (parent) => {
     }
 };
 
+const createButton = async (index, button, meals) => {
+    button.setAttribute("type", "button");
+    button.setAttribute("value", "Recepi");
+    button.id = meals[index].idMeal
+
+    button.className = "Recipe-Searcg-Btn"
+    button.addEventListener("click", async () => {
+        const fetching = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${meals[index].idMeal}`)
+        const parsedMealField = await fetching.json()
+
+        mealDetailsContent.style.display = "block"
+        document.documentElement.style.overflow = 'hidden';  // firefox, chrome
+        document.body.scroll = "no"; // ie only
+        recipeInstructions.innerText = `${parsedMealField.meals[0].strInstructions}`
+        recipeTitle.innerText = meals[index].strMeal
+        recipeImg.src = `${parsedMealField.meals[0].strMealThumb}`
+    });
+}
+
 const createMealCards = async (meals) => {
     for (let i = 0; i < meals.length; i++) {
         const card = document.createElement("div")
         card.id = "card"
+        card.setAttribute("class", "animate__animated animate__fadeInUp")
         const mealHeading = document.createElement("h2");
         const mealImg = document.createElement("img")
         mealImg.id = "meal-Img"
 
         const btn = document.createElement("INPUT");
-        btn.setAttribute("type", "button");
-        btn.setAttribute("value", "Recepi");
-        btn.id = meals[i].idMeal
 
-        btn.className = "Recipe-Searcg-Btn"
-        btn.addEventListener("click", async (e) => {
-
-            const fetching = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${meals[i].idMeal}`)
-            const parsedMealField = await fetching.json()
-
-            mealDetailsContent.style.display = "block"
-            document.documentElement.style.overflow = 'hidden';  // firefox, chrome
-            document.body.scroll = "no"; // ie only
-            recipeInstructions.innerText = `${parsedMealField.meals[0].strInstructions}`
-            recipeTitle.innerText = meals[i].strMeal
-            recipeImg.src = `${parsedMealField.meals[0].strMealThumb}`
-        })
+        createButton(i, btn, meals);
 
         ///  apend elements 
         mealSearchResults.appendChild(card) // parent div meal
@@ -59,6 +64,8 @@ async function fetchingMealByIngredient(ingredient) {
     const json = await response.json();
 
     if (!json.meals) {
+        removeChilds(mealSearchResults);
+
         resultsTitle.innerText = "No meals found...";
     } else {
         removeChilds(mealSearchResults);
@@ -92,30 +99,8 @@ async function listMealsByCategory(category) {
 
     removeChilds(mealSearchResults);
 
-    for (let i = 0; i < json.meals.length; i++) {
-        const card = document.createElement("div")
-        card.id = "card"
-        card.setAttribute("class", "animate__animated animate__fadeInLeft")
-        const mealHeading = document.createElement("h2");
-        const mealImg = document.createElement("img")
-        mealImg.id = "meal-Img"
-
-        ///  apend elements 
-        mealSearchResults.appendChild(card) // parent div meal
-        card.appendChild(mealImg)
-        card.appendChild(mealHeading)
-        mealHeading.innerText = json.meals[i].strMeal;
-        console.log(json.meals[i])
-
-        const img = await getMealImg(json.meals[i].idMeal)
-
-        // style for images
-        mealImg.src = img
-        mealImg.width = "200"
-        mealImg.height = "200"
-    }
+    createMealCards(json.meals);
 }
-
 
 //Event listeners
 searchButton.addEventListener("click", (e) => {
