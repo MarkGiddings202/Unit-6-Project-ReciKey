@@ -18,7 +18,7 @@ body {
 }
 .cocktailCard {
   width: 300px;
-  margin: 50px;
+  margin: 70px;
 }
 .cocktailImg {
     width: 100%;
@@ -36,10 +36,13 @@ body {
 
 .cocktailIngredients{
   width: 300px;
+  margin-right:80px ;
 }
 .cocktailIngredients, li {
   list-style: none;
   background: #cce5ff;
   color: darkblue;
   width: 300px;
+  
+  
 }
