@@ -12,6 +12,29 @@
   --tenne-tawny: #d65108;
   --tenne-tawny-dark: #b54507;
 }
+/* styling webpage */
+.navbar{
+background-color: #333333 !important;
+}
+.navbar-brand, .nav-link{
+  color:#fff !important;
+}
+.Container{
+  background-color: #1d1d1d !important;
+}
+.meal-wrapper{
+  background-color: #1d1d1d !important;
+}
+.title{
+  color: #fff;
+}
+blockquote{
+  color: #fff;
+}
+/* .search-control{
+  border: 1px #0e7cc7 
+} */
+/* styling webpage  */
 
 body {
   /*  */
@@ -61,6 +84,7 @@ body {
 .search-control,
 .search-btn {
   width: 100%;
+  color: #0e7cc7;
 }
 
 /*  */
@@ -71,8 +95,8 @@ body {
   outline: 0;
 
   /* color of searchbar boarder  */
-  border: 1px solid var(--tenne-tawny);
-
+  /* border: 1px solid var(--tenne-tawny); */
+  border: 1px solid #0e7cc7;
   color: var(--tenne-tawny);
   border-top-left-radius: 2rem;
   border-bottom-left-radius: 2rem;
@@ -80,7 +104,8 @@ body {
 
 /* color of text inside of searchbar */
 .search-control::placeholder {
-  color: var(--tenne-tawny);
+  /* color: var(--tenne-tawny); */
+  color: #0e7cc7;
 }
 
 /* search button */
@@ -92,7 +117,8 @@ body {
   font-size: 1.8rem;
 
   /* background changes color of magnifying glass background */
-  background: var(--tenne-tawny);
+  /* background: var(--tenne-tawny) */
+  background: #0e7cc7;
 
   color: #fff;
   /* change the color of the magnifying glass with color */
