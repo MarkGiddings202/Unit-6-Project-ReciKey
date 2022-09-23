@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-weight: 300;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-family: "Poppins", sans-serif;
+  background-color: #074771;
+}
+
+#cocktail {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cocktailCard {
+  width: 300px;
+  margin: 50px;
+}
+.cocktailImg {
+    width: 100%;
+    height: 268px;
+    object-fit: cover;
+  }
+
+.search-form {
+  text-align: center;
+  padding-top: 5rem;
+  width: 85vw;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.cocktailIngredients{
+  width: 300px;
+}
+.cocktailIngredients, li {
+  list-style: none;
+  background: #cce5ff;
+  color: darkblue;
+  width: 300px;
+}
