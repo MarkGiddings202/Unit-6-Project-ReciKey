@@ -21,6 +21,7 @@ const createButton = async (index, button, meals) => {
         recipeInstructions.innerText = `${parsedMealField.meals[0].strInstructions}`
         recipeTitle.innerText = meals[index].strMeal
         recipeImg.src = `${parsedMealField.meals[0].strMealThumb}`
+        recipeLink.href = `${parsedMealField.meals[0].strYoutube}`
     });
 }
 

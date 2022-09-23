@@ -32,4 +32,5 @@ const mealDetailsContent = document.querySelector(".meal-details-content")
 const span = document.getElementsByClassName("close")[0];
 const container = document.querySelector(".Container")
 const pageBody = document.querySelector(".Body")
+const recipeLink = document.querySelector(".link");
 
