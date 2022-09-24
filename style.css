@@ -210,10 +210,10 @@ body {
 
 }
 
-/* .Recipe-Search-Btn:hover {
+.Recipe-Search-Btn:hover {
   scale: 1.1;
   border-color: #0078d7;
-} */
+}
 
 .modal-content {
   background-color: #fefefe;
