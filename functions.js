@@ -31,6 +31,7 @@ const createMealCards = async (meals) => {
         card.id = "card"
         card.setAttribute("class", "animate__animated animate__fadeInUp")
         const mealHeading = document.createElement("h2");
+        mealHeading.className= "Meal-Card-Title"
         const mealImg = document.createElement("img")
         mealImg.id = "meal-Img"
 
