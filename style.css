@@ -7,12 +7,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  /* root colors  */
-  --tenne-tawny: #d65108;
-  --tenne-tawny-dark: #b54507;
-}
-
 /* styling webpage */
 .navbar {
 
