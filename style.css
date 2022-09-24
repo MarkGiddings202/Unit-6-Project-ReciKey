@@ -80,6 +80,7 @@ body {
 }
 
 .title {
+  font-family: Cambria;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
@@ -288,15 +289,16 @@ body {
 
 .recommended-options {
   margin: auto 5px;
-  background-color: white;
+  background-color: #0e7cc7;
   padding: 6px;
   border-radius: 20px;
   transition: scale 0.1s ease;
+  color: white;
 }
 
 .recommended-options:hover {
   scale: 1.1;
-  border-color: #0078d7;
+  background-color: #094872;
 }
 
 /* Media Queries */
