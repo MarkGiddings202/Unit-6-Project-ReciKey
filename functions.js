@@ -1,4 +1,4 @@
-// Functions
+//Main Functions
 async function fetchingMealByIngredient(ingredient) {
     const response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredient}`)
     const json = await response.json();
@@ -46,6 +46,7 @@ async function listMealsByCategory(category) {
     createMealCards(json.meals);
 }
 
+//Helper Functions
 const removeChildren = (parent) => {
     while (parent.lastChild) {
         parent.removeChild(parent.lastChild);
