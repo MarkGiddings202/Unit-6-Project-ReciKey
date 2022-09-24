@@ -7,32 +7,32 @@
   box-sizing: border-box;
 }
 
-:root {
-  /* root colors  */
-  --tenne-tawny: #d65108;
-  --tenne-tawny-dark: #b54507;
-}
-
 /* styling webpage */
-.navbar{
+.navbar {
 
   background-color: #333333 !important;
-  }
-  .navbar-brand, .nav-link{
-    color:#fff !important;
-  }
-  .Container{
-    background-color: #1d1d1d !important;
-  }
-  .meal-wrapper{
-    background-color: #1d1d1d !important;
-  }
-  .title{
-    color: #fff;
-  }
-  blockquote{
-    color: #fff;
-  }
+}
+
+.navbar-brand,
+.nav-link {
+  color: #fff !important;
+}
+
+.Container {
+  background-color: #1d1d1d !important;
+}
+
+.meal-wrapper {
+  background-color: #1d1d1d !important;
+}
+
+.title {
+  color: #fff;
+}
+
+blockquote {
+  color: #fff;
+}
 
 .btn {
   background-color: #0e7cc7;
@@ -46,6 +46,25 @@
   border-color: #094872;
 }
 
+/* selected from inspect element*/
+.btn-danger:not(:disabled):not(.disabled).active,
+.btn-danger:not(:disabled):not(.disabled):active,
+.show>.btn-danger.dropdown-toggle {
+  background-color: #0e7cc7;
+  border-color: #0e7cc7;
+}
+
+.btn-danger:not(:disabled):not(.disabled).active:focus,
+.btn-danger:not(:disabled):not(.disabled):active:focus,
+.show>.btn-danger.dropdown-toggle:focus {
+  box-shadow: 0 0 #0e7cc7 !important;
+}
+
+.btn-danger.focus,
+.btn-danger:focus {
+  box-shadow: 0 0 #0e7cc7 !important;
+}
+
 body {
   /*  */
   font-weight: 300;
@@ -55,6 +74,7 @@ body {
 }
 
 .title {
+  font-family: Cambria;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
@@ -145,7 +165,7 @@ body {
 
 /* hover effects for search-button */
 .search-btn:hover {
-  background: var(--tenne-tawny-dark);
+  background: #094872;
 }
 
 /* meal results positioning */
@@ -171,10 +191,10 @@ body {
   padding: 10px;
   width: 100%;
   height: 100%;
-  
+
 }
 
-.Meal-Card-Title{
+.Meal-Card-Title {
   color: #fff;
 }
 
@@ -201,7 +221,7 @@ body {
   /* Black w/ opacity */
 }
 
-.Recipe-Search-Btn{
+.Recipe-Search-Btn {
   margin: auto 5px;
   background-color: white;
   padding: 6px;
@@ -261,17 +281,18 @@ body {
   display: block;
 }
 
-.recommended-options {
+.recommended-options, .Recipe-Search-Btn {
   margin: auto 5px;
-  background-color: white;
+  background-color: #0e7cc7;
   padding: 6px;
   border-radius: 20px;
   transition: scale 0.1s ease;
+  color: white;
 }
 
-.recommended-options:hover {
+.recommended-options:hover, .Recipe-Search-Btn:hover {
   scale: 1.1;
-  border-color: #0078d7;
+  background-color: #094872;
 }
 
 /* Media Queries */

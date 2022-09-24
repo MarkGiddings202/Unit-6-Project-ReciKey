@@ -5,13 +5,10 @@ async function fetchingMealByIngredient(ingredient) {
 
     if (!json.meals) {
         removeChildren(mealSearchResults);
-
         resultsTitle.innerText = "No meals found...";
     } else {
         resultsTitle.innerText = "Your Search Results:";
-
         removeChildren(mealSearchResults);
-
         createMealCards(json.meals)
     }
 }
@@ -60,6 +57,7 @@ const createMealCards = async (meals) => {
         card.setAttribute("class", "animate__animated animate__fadeInUp")
         const mealHeading = document.createElement("h2");
         mealHeading.className = "Meal-Card-Title"
+        mealHeading.style.fontFamily = "Cambria";
         const mealImg = document.createElement("img")
         mealImg.id = "meal-Img"
 
