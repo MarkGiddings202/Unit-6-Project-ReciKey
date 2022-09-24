@@ -12,29 +12,7 @@
   --tenne-tawny: #d65108;
   --tenne-tawny-dark: #b54507;
 }
-/* styling webpage */
-.navbar{
-background-color: #333333 !important;
-}
-.navbar-brand, .nav-link{
-  color:#fff !important;
-}
-.Container{
-  background-color: #1d1d1d !important;
-}
-.meal-wrapper{
-  background-color: #1d1d1d !important;
-}
-.title{
-  color: #fff;
-}
-blockquote{
-  color: #fff;
-}
-/* .search-control{
-  border: 1px #0e7cc7 
-} */
-/* styling webpage  */
+
 
 body {
   /*  */
