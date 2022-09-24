@@ -221,20 +221,6 @@ body {
   /* Black w/ opacity */
 }
 
-.Recipe-Search-Btn {
-  margin: auto 5px;
-  background-color: white;
-  padding: 6px;
-  border-radius: 20px;
-  transition: scale 0.1s ease;
-
-}
-
-.Recipe-Search-Btn:hover {
-  scale: 1.1;
-  border-color: #0078d7;
-}
-
 .modal-content {
   background-color: #fefefe;
   margin: auto;
