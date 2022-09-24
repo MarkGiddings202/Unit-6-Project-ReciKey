@@ -13,6 +13,16 @@
   --tenne-tawny-dark: #b54507;
 }
 
+.btn {
+  background-color: #0e7cc7;
+  border-color: #0e7cc7;
+  transition: background-color 1s;
+}
+
+.btn:hover {
+  background-color: #094872;
+  border-color: #094872;
+}
 
 body {
   /*  */

@@ -68,6 +68,8 @@ async function fetchingMealByIngredient(ingredient) {
 
         resultsTitle.innerText = "No meals found...";
     } else {
+        resultsTitle.innerText = "Your Search Results:";
+
         removeChildren(mealSearchResults);
 
         createMealCards(json.meals)
@@ -96,6 +98,8 @@ async function listMealsByCategory(category) {
 
     const response = await fetch(`${categoryEnpoint}`);
     const json = await response.json();
+
+    resultsTitle.innerText = "Your Search Results:";
 
     removeChildren(mealSearchResults);
 
