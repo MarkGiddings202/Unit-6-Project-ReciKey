@@ -15,6 +15,7 @@
 
 /* styling webpage */
 .navbar{
+
   background-color: #333333 !important;
   }
   .navbar-brand, .nav-link{
@@ -37,6 +38,7 @@
   background-color: #0e7cc7;
   border-color: #0e7cc7;
   transition: background-color 1s;
+
 }
 
 .btn:hover {
@@ -164,12 +166,16 @@ body {
 }
 
 #card {
-  /* border: 2px dashed #0868d6; */
-  /* border: 2px solid rgba(7, 80, 148, 0.877); */
+  border: 2px solid #0e7cc7;
   border-radius: 15%;
   padding: 10px;
   width: 100%;
   height: 100%;
+  
+}
+
+.Meal-Card-Title{
+  color: #fff;
 }
 
 .meal-details-content {
@@ -194,6 +200,20 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
   /* Black w/ opacity */
 }
+
+.Recipe-Search-Btn{
+  margin: auto 5px;
+  background-color: white;
+  padding: 6px;
+  border-radius: 20px;
+  transition: scale 0.1s ease;
+
+}
+
+/* .Recipe-Search-Btn:hover {
+  scale: 1.1;
+  border-color: #0078d7;
+} */
 
 .modal-content {
   background-color: #fefefe;
