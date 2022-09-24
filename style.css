@@ -36,6 +36,19 @@ blockquote{
 } */
 /* styling webpage  */
 
+
+.btn {
+  background-color: #0e7cc7;
+  border-color: #0e7cc7;
+  transition: background-color 1s;
+}
+
+.btn:hover {
+  background-color: #094872;
+  border-color: #094872;
+}
+>>>>>>> e27ad350b11cf0a8c02a868e71a4eeea6eb96ad1
+
 body {
   /*  */
   font-weight: 300;
