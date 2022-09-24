@@ -281,7 +281,7 @@ body {
   display: block;
 }
 
-.recommended-options {
+.recommended-options, .Recipe-Search-Btn {
   margin: auto 5px;
   background-color: #0e7cc7;
   padding: 6px;
@@ -290,7 +290,7 @@ body {
   color: white;
 }
 
-.recommended-options:hover {
+.recommended-options:hover, .Recipe-Search-Btn:hover {
   scale: 1.1;
   background-color: #094872;
 }
