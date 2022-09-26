@@ -17,9 +17,9 @@ _Tech Stack:_
 
 ---
 
-## Demo
+## Webpage Demo
 
-_gif pending..._
+<img src="webpage-demo-gif/webpage-demo.gif">
 
 ---
 
