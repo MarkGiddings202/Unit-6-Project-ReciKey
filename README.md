@@ -14,6 +14,8 @@ _Team:_
 _Tech Stack:_
 
 * Frontend: HTML, CSS, JavaScript
+* Libraries: Bootstrap, animate.css
+* API: [TheMealDB](https://themealdb.com/)
 
 ---
 
